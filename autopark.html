@@ -18,9 +18,10 @@
     <meta name="format-detection" content="telephone=no">
   </head>
   <body>
+    <div class="back"></div>
     <header class="header">
       <div class="ncontainer">
-        <div class="header__wrap"><a class="header__logo" href="/"><img src="images/logo.svg" alt="ГИД"></a>
+        <div class="header__wrap"><a class="header__logo" href="/"><img src="images/logo.svg" alt="ГИД"></a><a class="header__logo header__logo_mob" href="/"><img src="images/logo-mob.svg" alt="ГИД"></a>
           <div class="header__menu">
             <nav class="header__nav">
               <li><a class="header__link" href="#">О нас</a></li>
@@ -32,6 +33,7 @@
           </div>
           <div class="header-block"><img src="images/phone.svg" alt="Телефон"><a class="header__phone" href="tel:+74912206706">+7 (4912) 206-706</a></div>
           <div class="header__check gid-btn">Записаться на пробное занятие</div>
+          <div class="header-burger">Меню</div>
         </div>
       </div>
     </header>
@@ -337,6 +339,21 @@
         </div>
       </div>
     </footer>
+    <div class="mobile-menu"> 
+      <nav class="header__nav">
+        <li><a class="header__link" href="#">О нас</a></li>
+        <li><a class="header__link header__link_sub" href="#">О продукте</a></li>
+        <li><a class="header__link" href="#">Тарифы</a></li>
+        <li><a class="header__link" href="#">Ещу пункт</a></li>
+        <li><a class="header__link" href="#">Конктакты</a></li>
+      </nav>
+      <div class="mobile-menu-down"><a class="mobile-menu-down__phone" href="tel:+74912206706"><img src="images/phone.svg" alt="Телефон">
+          <div class="mobile-menu-down__col">
+            <div class="header__phone">+7 (4912) 206-706</div><span>Звоните с 9:00 до 21:00</span>
+          </div></a>
+        <div class="gid-btn">Записаться</div>
+      </div>
+    </div>
     <script src="vendor/jquery-3.4.1.min.js"></script>
     <script src="vendor/bootstrap.bundle.js"></script>
     <script src="vendor/jquery.formstyler.min.js"></script>

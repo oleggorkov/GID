@@ -16,4 +16,25 @@ $(document).ready(function() {
             if (!wasActive) $item.addClass('active');
         });
     });
+
+    $('.header-burger').on('click', function(){
+		$('.mobile-menu').toggleClass('show'); 
+        $('body').toggleClass('burger-active');
+	});
+
+    $('.back').on('click', function () {
+        $('body').removeClass('burger-active');
+        $('.mobile-menu').removeClass('show');
+    });
+
+    const swiper = new Swiper('.swiper-tariff', {
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 24,
+        slidesPerView: 1.2,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
 });
