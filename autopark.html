@@ -41,14 +41,13 @@
             <div class="header-down">
               <div class="header__menu">
                 <nav class="header__nav">
-                  <li><a class="header__link" href="#">О нас</a></li>
+                  <li><a class="header__link" href="/about.html">О нас</a></li>
                   <li><a class="header__link header__link_sub" href="#">О продукте</a></li>
-                  <li><a class="header__link" href="#">Тарифы</a></li>
-                  <li><a class="header__link" href="#">Ещу пункт</a></li>
+                  <li><a class="header__link" href="/tariffs.html">Тарифы</a></li>
+                  <li><a class="header__link" href="/autopark.html">Автопарк</a></li>
                   <li><a class="header__link" href="#">Конктакты</a></li>
                 </nav>
-              </div>
-              <div class="header__check gid-btn">Записаться на пробное занятие</div>
+              </div><a class="header__check gid-btn" href="#modal-form" data-bs-toggle="modal">Записаться на пробное занятие</a>
             </div>
           </div>
           <div class="header-block header-block_mob"><img src="images/phone.svg" alt="Телефон">
@@ -62,159 +61,107 @@
       <div class="main">
         <div class="content-page">
           <div class="ncontainer">
-            <div class="page-banner"> 
+            <ul class="breadcrumbs">
+              <li> <a href="/">Главная</a></li>
+              <li> <span>Автопарк</span></li>
+            </ul>
+          </div>
+          <div class="page-banner">
+            <div class="ncontainer">
+              <div class="banner-label__wrap">
+                <div class="banner-label">Наш автопарк</div>
+              </div>
               <div class="page-banner__left"> 
-                <div class="breadcrumbs">
-                  <li> <a href="#">Главная</a></li>
-                  <li> <span>Автопарк</span></li>
-                </div>
                 <div class="page-banner__title">Наш автопарк</div>
                 <div class="page-banner__desc">Современные, чистые и технически исправные автомобили 2021–2024 года выпуска с механической (МКПП) и автоматической (АКПП) коробками передач. Мы гарантируем комфорт и безопасность на каждом уроке.  </div>
               </div>
-              <div class="page-banner__img"> <img src="images/autopark-banner.png" alt="car"></div>
             </div>
           </div>
-          <div class="ncontainer mb-80">
-            <div class="choose">
-              <div class="block-row">
-                <div class="block__title">Выберите автомобиль</div>
-                <div class="block__subtitle">Мы предлагаем несколько программ, чтобы вы могли выбрать оптимальный вариант под свои цели и график.</div>
+          <div class="ncontainer mb-100">
+            <div class="autopark"> 
+              <div class="block-head__page">
+                <div class="second-title">Выберите автомобиль</div>
+                <div class="second-subtitle__page">
+                   Мы предлагаем несколько программ, чтобы вы могли<br>выбрать оптимальный вариант под свои цели и график.</div>
               </div>
-              <div class="choose-block"> 
-                <div class="choose-block-item gid-btn__white active">Все авто</div>
-                <div class="choose-block-item gid-btn__white">Механика (МКПП)</div>
-                <div class="choose-block-item gid-btn__white">Автомат (АКПП)</div>
-                <div class="choose-block-item gid-btn__white">Мотоциклы</div>
-                <div class="choose-block-item gid-btn__white">Спец.техника</div>
+            </div>
+            <div class="autopark-grid"> 
+              <div class="autopark-item"> 
+                <div class="autopark-item__img"><img src="images/park1.png" alt="car"></div>
+                <div class="autopark-item__title">Марка и модель авто</div>
+                <div class="autopark-item__desc">Легковые автомобили</div>
+                <div class="autopark-item__row">
+                  <div class="autopark-item__label">АКПП</div>
+                  <div class="autopark-item__label">Бензин</div>
+                  <div class="autopark-item__label">2023 г.</div>
+                  <div class="autopark-item__label">1.5л.</div>
+                </div>
               </div>
-              <div class="autopark-grid choose-main">
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car1.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
+              <div class="autopark-item"> 
+                <div class="autopark-item__img"> <img src="images/park2.png" alt="car"></div>
+                <div class="autopark-item__title">Марка и модель авто</div>
+                <div class="autopark-item__desc">Легковые автомобили</div>
+                <div class="autopark-item__row">
+                  <div class="autopark-item__label">АКПП</div>
+                  <div class="autopark-item__label">Бензин</div>
+                  <div class="autopark-item__label">2023 г.</div>
+                  <div class="autopark-item__label">1.5л.</div>
                 </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car2.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
+              </div>
+              <div class="autopark-item"> 
+                <div class="autopark-item__img"> <img src="images/park3.png" alt="car"></div>
+                <div class="autopark-item__title">Марка и модель авто</div>
+                <div class="autopark-item__desc">Легковые автомобили</div>
+                <div class="autopark-item__row">
+                  <div class="autopark-item__label">АКПП</div>
+                  <div class="autopark-item__label">Бензин</div>
+                  <div class="autopark-item__label">2023 г.</div>
+                  <div class="autopark-item__label">1.5л.</div>
                 </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car3.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
+              </div>
+              <div class="autopark-item"> 
+                <div class="autopark-item__img"> <img src="images/park4.png" alt="car"></div>
+                <div class="autopark-item__title">Марка и модель авто</div>
+                <div class="autopark-item__desc">Легковые автомобили</div>
+                <div class="autopark-item__row">
+                  <div class="autopark-item__label">АКПП</div>
+                  <div class="autopark-item__label">Бензин</div>
+                  <div class="autopark-item__label">2023 г.</div>
+                  <div class="autopark-item__label">1.5л.</div>
                 </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car4.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
+              </div>
+              <div class="autopark-item"> 
+                <div class="autopark-item__img"> <img src="images/park5.png" alt="car"></div>
+                <div class="autopark-item__title">Марка и модель авто</div>
+                <div class="autopark-item__desc">Легковые автомобили</div>
+                <div class="autopark-item__row">
+                  <div class="autopark-item__label">АКПП</div>
+                  <div class="autopark-item__label">Бензин</div>
+                  <div class="autopark-item__label">2023 г.</div>
+                  <div class="autopark-item__label">1.5л.</div>
                 </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car4.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
-                </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car2.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
-                </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car3.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
-                </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car1.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
-                </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car4.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
-                </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car2.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
-                </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car3.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
-                </div>
-                <div class="autopark-item"> 
-                  <div class="autopark-item__img"> <img src="images/park-car1.png" alt="car"></div>
-                  <div class="autopark-item__title">Марка и модель авто</div>
-                  <div class="autopark-item__desc">Легковые автомобили</div>
-                  <div class="autopark-item__row">
-                    <div class="autopark-item__label">АКПП</div>
-                    <div class="autopark-item__label">Бензин</div>
-                    <div class="autopark-item__label">1.5л.</div>
-                  </div>
+              </div>
+              <div class="autopark-item"> 
+                <div class="autopark-item__img"> <img src="images/park6.png" alt="car"></div>
+                <div class="autopark-item__title">Марка и модель авто</div>
+                <div class="autopark-item__desc">Легковые автомобили</div>
+                <div class="autopark-item__row">
+                  <div class="autopark-item__label">АКПП</div>
+                  <div class="autopark-item__label">Бензин</div>
+                  <div class="autopark-item__label">2023 г.</div>
+                  <div class="autopark-item__label">1.5л.</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="block-color autopark-why mb-80">
+          <div class="block-color autopark-why mb-100">
             <div class="ncontainer">
-              <div class="banner-label">Идеальное состояние</div>
-              <div class="block__title">Почему наши автомобили всегда готовы к поездке</div>
+              <div class="banner-label__wrap">
+                <div class="banner-label">Идеальное состояние</div>
+              </div>
+              <div class="block-head__page">
+                <div class="second-title">Почему наши автомобили<br>всегда готовы к поездке</div>
+              </div>
               <div class="autopark-why__wrap">
                 <div class="autopark-why-item">
                   <div class="autopark-why-item__img"> <img src="images/autopark-adv1.svg" alt="advant"></div>
@@ -239,10 +186,19 @@
               </div>
             </div>
           </div>
-          <div class="autopark-how mb-80">
+          <div class="autopark-how mb-100">
             <div class="ncontainer">
-              <div class="banner-label">Ваш удобный выбор</div>
-              <div class="block__title">Как выбрать свой автомобиль для учебы</div>
+              <div class="block-head__wimg">
+                <div class="block-head__left">
+                  <div class="banner-label__wrap">
+                    <div class="banner-label">Ваш удобный выбор</div>
+                  </div>
+                  <div class="block-head__page">
+                    <div class="second-title">Как выбрать свой<br>автомобиль для учебы</div>
+                  </div>
+                </div>
+                <div class="block-head__img"><img src="images/how-back.png" alt="car"></div>
+              </div>
               <div class="autopark-how__wrap">
                 <div class="autopark-how-item">
                   <div class="autopark-how-item__num">01</div>
@@ -268,24 +224,13 @@
               </div>
             </div>
           </div>
-          <div class="block-color__blue mb-80">
-            <div class="ncontainer">
-              <div class="review">
-                <div class="review-img"> <img src="images/review-user.png" alt="user"></div>
-                <div class="review-col"> 
-                  <div class="review-text">
-                     «Сначала очень боялась руля и думала, что механика — это не моё. Но Фольксваген Поло в автошколе Кларити просто чудо: педали мягкие, коробка переключается очень четко. Заниматься на такой ухоженной и чистой машине — одно удовольствие!»</div>
-                  <div class="review-desc">Алена Макарова, выпускница тарифа "Оптимал" (Сдала экзамен с первого раза)</div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="ncontainer">
             <div class="main-form"> 
               <div class="main-form__left">
                 <div class="block__title">Остались вопросы?</div>
                 <div class="block__subtitle">Оставьте контакты, наш специалист перезвонит вам в течение 10 минут.</div>
-                <form action="#"> 
+                <div class="main-form__img"> <img src="images/form-back-mob.png" alt="car"></div>
+                <form class="form-back" action="#">
                   <div class="form__input"> 
                     <input type="text" placeholder="Ваше имя">
                   </div>
@@ -295,8 +240,10 @@
                   <div class="form__check">
                     <input type="checkbox" name="main-form" id="main-form">
                     <label type="checkbox" for="main-form">
-                      Я согласен на обработку
-                      &nbsp;<a href="#" target="_blank">персональных данных</a>
+                      <div class="form__check__text">
+                        Я согласен на обработку
+                        &nbsp;<a href="#" target="_blank">персональных данных</a>
+                      </div>
                     </label>
                   </div>
                   <button class="form__btn gid-btn" type="submit"> <span>Отправить</span><img src="images/arrow-white-right.svg" alt="arrow"></button>
@@ -321,17 +268,15 @@
               <div class="footer-menu__title">Информация</div><a class="footer-menu__link" href="#">Карта сайта</a><a class="footer-menu__link" href="#">Что ищут на сайте?</a><a class="footer-menu__link" href="#">Частые вопросы</a>
             </div>
             <div class="footer-menu">
-              <div class="footer-menu__title">Школа</div><a class="footer-menu__link" href="#">Тарифы</a><a class="footer-menu__link" href="#">Сведения</a><a class="footer-menu__link" href="#">Документы</a>
+              <div class="footer-menu__title">Школа</div><a class="footer-menu__link" href="/tariffs.html">Тарифы</a><a class="footer-menu__link" href="#">Сведения</a><a class="footer-menu__link" href="#">Документы</a>
             </div>
             <div class="footer-menu">
-              <div class="footer-menu__title">Компания</div><a class="footer-menu__link" href="#">О нас</a><a class="footer-menu__link" href="#">Новости</a><a class="footer-menu__link" href="#">Контакты</a>
+              <div class="footer-menu__title">Компания</div><a class="footer-menu__link" href="/about.html">О нас</a><a class="footer-menu__link" href="#">Новости</a><a class="footer-menu__link" href="#">Контакты</a>
             </div>
           </div>
         </div>
         <div class="footer-center"> 
-          <div class="footer-center__col"> <a class="footer-center__phone" href="tel:+74912206706">+7 (4912) 206-706</a>
-            <div class="footer-phone__btn gid-btn">Вам перезвонить?</div>
-          </div>
+          <div class="footer-center__col"> <a class="footer-center__phone" href="tel:+74912206706">+7 (4912) 206-706</a><a class="footer-phone__btn gid-btn" href="#modal-form" data-bs-toggle="modal">Вам перезвонить?</a></div>
           <div class="footer-center__col">
             <div class="footer-center__title">График работы:</div>
             <div class="footer-center__text"> <strong>Пн-Пт </strong>08.00 - 20.00</div>
@@ -371,9 +316,7 @@
       <div class="mobile-menu-down"><a class="mobile-menu-down__phone" href="tel:+74912206706"><img src="images/phone.svg" alt="Телефон">
           <div class="mobile-menu-down__col">
             <div class="header__phone">+7 (4912) 206-706</div><span>Звоните с 9:00 до 21:00</span>
-          </div></a>
-        <div class="gid-btn">Записаться</div>
-      </div>
+          </div></a><a class="gid-btn" href="#modal-form" data-bs-toggle="modal">Записаться</a></div>
     </div>
     <script src="vendor/jquery-3.4.1.min.js"></script>
     <script src="vendor/bootstrap.bundle.js"></script>
@@ -385,5 +328,49 @@
     <script src="vendor/colorpicker.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/index-new.js"></script>
+    <div class="modal-game modal fade" id="modal-game" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-custom-header">
+              <button class="modal-close" type="button" data-bs-dismiss="modal"><img src="images/close-modal.svg" alt="Закрыть"></button>
+            </div>
+            <iframe src="https://gidautoschool.lovable.app/" width="100%" height="600" style="border: none;" title="Игра, созданная в Lovable" allow="fullscreen"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-form modal fade" id="modal-form" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-custom-header">
+              <div class="modal-custom__title">Запишитесь на пробное обучение</div>
+              <button class="modal-close" type="button" data-bs-dismiss="modal"><img src="images/close-modal.svg" alt="Закрыть"></button>
+            </div>
+            <div class="modal-custom-desc">Оставьте контакты, наш специалист перезвонит вам в течение 10 минут.</div>
+            <div class="form-img"><img src="images/form-img.png" alt="Закрыть"></div>
+            <form class="form-back" action="#">
+              <div class="form__input"> 
+                <input type="text" placeholder="Ваше имя">
+              </div>
+              <div class="form__input"> 
+                <input type="tel" placeholder="Номер телефона">
+              </div>
+              <div class="form__check">
+                <input type="checkbox" name="main-form-modal" id="main-form-modal">
+                <label type="checkbox" for="main-form-modal">
+                  <div class="form__check__text">
+                    Я согласен на обработку
+                    &nbsp;<a href="#" target="_blank">персональных данных</a>
+                  </div>
+                </label>
+              </div>
+              <button class="form__btn gid-btn" type="submit"> <span>Отправить</span><img src="images/arrow-white-right.svg" alt="arrow"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
