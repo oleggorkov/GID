@@ -2878,7 +2878,7 @@ footer {
 }
 
 .form__check:has(input:checked) label:before {
-  background-color: #FB024E;
+  background-color: #CF1430;
   border: 1px solid transparent;
 }
 
