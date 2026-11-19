@@ -68,12 +68,16 @@ body {
   }
 }
 
-body:has(.content-page) footer {
+body:has(.content-page__white) footer, body:has(.content-page__white) footer {
   margin: 0;
 }
 
 .content-page {
   background-color: #F6F6F6;
+}
+
+.content-page__white {
+  background-color: #FFF;
 }
 
 h1, h2, h3, h4,
