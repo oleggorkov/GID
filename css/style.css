@@ -70,10 +70,22 @@ body {
 
 .content-page {
   background-color: #F6F6F6;
+  padding: 32px 0;
+}
+@media (max-width: 991px) {
+  .content-page {
+    padding: 24px 0;
+  }
 }
 
 .content-page__white {
   background-color: #FFF;
+  padding: 32px 0;
+}
+@media (max-width: 991px) {
+  .content-page__white {
+    padding: 24px 0;
+  }
 }
 
 h1, h2, h3, h4,
@@ -114,15 +126,6 @@ a:hover {
 
 label {
   margin: 0;
-}
-
-.main-page {
-  padding: 32px 0;
-}
-@media (max-width: 991px) {
-  .main-page {
-    padding: 24px 0;
-  }
 }
 
 .svg-inline--fa {
