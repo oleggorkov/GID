@@ -68,6 +68,10 @@ body {
   }
 }
 
+body:has(.content-page) footer {
+  margin: 0;
+}
+
 .content-page {
   background-color: #F6F6F6;
   padding: 32px 0;
