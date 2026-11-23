@@ -38,6 +38,36 @@ $(document).ready(function() {
         },
     });
 
+    // const tariffsBlock = document.querySelector('#tariffs');
+    // const modalEl      = document.querySelector('#modal-game');
+
+    // if (!tariffsBlock || !modalEl || typeof bootstrap === 'undefined') return;
+
+    // const modal = new bootstrap.Modal(modalEl, {
+    //     backdrop: true,
+    //     keyboard: true
+    // });
+
+    // let isOpen = false;
+
+    // // Следим за закрытием — чтобы можно было открыть снова
+    // modalEl.addEventListener('hidden.bs.modal', () => {
+    //     isOpen = false;
+    // });
+
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //     if (entry.isIntersecting && !isOpen) {
+    //         isOpen = true;
+    //         modal.show();
+    //     }
+    //     });
+    // }, {
+    //     threshold: 0.5
+    // });
+
+    // observer.observe(tariffsBlock);
+
     const tariffsBlock = document.querySelector('#tariffs');
     const modalEl      = document.querySelector('#modal-game');
 
@@ -48,18 +78,15 @@ $(document).ready(function() {
         keyboard: true
     });
 
-    let isOpen = false;
-
-    // Следим за закрытием — чтобы можно было открыть снова
-    modalEl.addEventListener('hidden.bs.modal', () => {
-        isOpen = false;
-    });
+    const STORAGE_KEY = 'gameModalShown';
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-        if (entry.isIntersecting && !isOpen) {
-            isOpen = true;
+        if (entry.isIntersecting) {
             modal.show();
+            sessionStorage.setItem(STORAGE_KEY, '1');
+            observer.disconnect(); // отписываемся, модалка больше не нужна
         }
         });
     }, {
