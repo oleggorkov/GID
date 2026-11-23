@@ -1,123 +1,65 @@
-jQuery(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function () {
+    var cookie = document.getElementById('cookie');
+    var btn = document.getElementById('cookie-btn');
 
-  /* tabs profile */
+    if (!cookie || !btn) return;
 
-  const tabItems = document.querySelectorAll('.profile-tabs__item');
-  const contentItems = document.querySelectorAll('.profile-tab');
+    try {
+        if (localStorage.getItem('cookieConsent') === '1') {
+            cookie.style.display = 'none';
+            return;
+        }
+    } catch (e) {}
 
-  if (tabItems.length > 0 && contentItems.length > 0) {
-    function activateTab(targetTab) {
-      const tabIndex = Array.from(tabItems).indexOf(targetTab);
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
 
-      // Удаляем активный класс у всех вкладок
-      tabItems.forEach(tab => {
-        tab.classList.remove('active');
-      });
+        try {
+            localStorage.setItem('cookieConsent', '1');
+        } catch (e) {}
 
-      // Удаляем активный класс у всех контентных блоков
-      contentItems.forEach(content => {
-        content.classList.remove('active');
-      });
-
-      // Добавляем активный класс нажатой вкладке
-      targetTab.classList.add('active');
-
-      // Активируем соответствующий контентный блок
-      if (tabIndex >= 0 && contentItems[tabIndex]) {
-        contentItems[tabIndex].classList.add('active');
-      }
-
-      // Обновляем breadcrumb (если есть)
-      const breadElement = document.getElementById('bread');
-      if (breadElement) {
-        const breadText = targetTab.dataset.breadText ||
-          (tabIndex === 0 ? ' Casual Stats' : (tabIndex === 1 ? ' Match History' : ' Competitive Stats'));
-        breadElement.textContent = breadText;
-      }
-    }
-
-    // Добавляем обработчики клика на все вкладки
-    tabItems.forEach(tab => {
-      tab.addEventListener('click', function() {
-        activateTab(this);
-      });
+        cookie.classList.add('cookie--closing');
+        setTimeout(function () {
+            cookie.style.display = 'none';
+        }, 300);
     });
+});
 
-    // Активируем первую вкладку, если нет активной
-    const activeTab = document.querySelector('.profile-tabs__item.active');
-    if (!activeTab && tabItems.length > 0) {
-      activateTab(tabItems[0]);
-    }
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const tariffsBlock = document.querySelector('#tariffs');
+  const modalEl      = document.querySelector('#modal-game');
 
-  /* кнопка скролла */
+  if (!tariffsBlock || !modalEl || typeof bootstrap === 'undefined') return;
 
-  const historyItems = document.querySelectorAll('.scroll__item');
-  const scrollTopBtn = document.querySelector('.scroll-top');
-  const historyContainer = document.querySelector('.scroll__inner');
-  function checkItemsCount() {
-    if (!scrollTopBtn) return;
-
-    if (historyItems.length > 2) {
-      scrollTopBtn.style.display = 'flex';
-
-    } else {
-      scrollTopBtn.style.display = 'none';
-    }
-  }
-  function scrollToTop() {
-    if (historyContainer) {
-      historyContainer.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-  }
-
-  if (scrollTopBtn) {
-    scrollTopBtn.addEventListener('click', scrollToTop);
-  }
-
-  if (historyContainer) {
-    const observer = new MutationObserver(checkItemsCount);
-
-    observer.observe(historyContainer, {
-      childList: true,
-      subtree: true
-    });
-  }
-
-  checkItemsCount();
-
-  /* Toast */
-  function showToast() {
-
-    const toast = document.getElementById('toast');
-    toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3000);
-  }
-
-  const cancelButtons = document.querySelectorAll('.profile-sub__cancel');
-
-  cancelButtons.forEach(button => {
-    button.addEventListener('click', showToast);
+  const modal = new bootstrap.Modal(modalEl, {
+    backdrop: true,
+    keyboard: true
   });
 
-  function showToast() {
+  let isOpen       = false;
+  let lastScrollY  = window.scrollY;
+  let scrollingDown = true;
 
-    const toast = document.getElementById('apply');
-    toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3000);
-  }
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    scrollingDown = y > lastScrollY;
+    lastScrollY = y;
+  }, { passive: true });
 
-  const apply = document.querySelectorAll('.custom-color__apply');
-
-  apply.forEach(button => {
-    button.addEventListener('click', showToast);
+  modalEl.addEventListener('hidden.bs.modal', () => {
+    isOpen = false;
   });
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !isOpen && scrollingDown) {
+        isOpen = true;
+        modal.show();
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  observer.observe(tariffsBlock);
 });

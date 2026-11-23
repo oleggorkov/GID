@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>ГИД Городской институт движения</title>
+    <script src="js/cookie-init.js"></script>
     <link rel="stylesheet" href="vendor/bootstrap.css">
     <link rel="stylesheet" href="vendor/jquery.formstyler.css">
     <link rel="stylesheet" href="vendor/jquery.formstyler.theme.css">
@@ -168,8 +169,12 @@
         </div>
       </div>
     </div>
-    <div class="toast" id="toast"><img src="images/check-green.svg" alt="check"><span>Subscription canceled</span></div>
-    <div class="toast" id="apply"><img src="images/check-green.svg" alt="check"><span>Changes Saved</span></div>
+    <div class="cookie" id="cookie"> 
+      <div class="cookie__wrap"> 
+        <div class="cookie__title mb-24">Мы используем cookie</div>
+        <div class="cookie__text mb-24">Для удобства работы сайта, персонализации сервисов и анализа посещаемости мы используем файлы cookie. Продолжая использовать наш сайт, вы соглашаетесь с использованием файлов cookie.</div><a class="gid-btn cookie-btn" id="cookie-btn">Согласен</a>
+      </div>
+    </div>
     <footer>
       <div class="ncontainer">
         <div class="footer-top">
@@ -259,7 +264,7 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="modal-custom-header">
-              <div class="modal-custom__title">Запишитесь на пробное обучение</div>
+              <div class="modal-custom__title">Запишитесь на пробное занятие</div>
               <button class="modal-close" type="button" data-bs-dismiss="modal"><img src="images/close-modal.svg" alt="Закрыть"></button>
             </div>
             <div class="modal-custom-desc">Оставьте контакты, наш специалист перезвонит вам в течение 10 минут.</div>
