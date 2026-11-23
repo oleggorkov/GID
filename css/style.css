@@ -3826,6 +3826,10 @@ body .modal iframe {
   margin: 24px 0 0 0;
 }
 
+.modal-game .modal-dialog {
+  max-width: 1200px;
+}
+
 .modal-custom-header {
   display: -webkit-box;
   display: -ms-flexbox;
