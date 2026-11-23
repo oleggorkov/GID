@@ -3826,7 +3826,7 @@ body .modal iframe {
   margin: 24px 0 0 0;
 }
 
-.modal-game .modal-dialog {
+body .modal-game .modal-dialog {
   max-width: 1200px;
 }
 
