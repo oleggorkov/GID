@@ -3935,8 +3935,18 @@ body .modal iframe {
   margin: 24px 0 0 0;
 }
 
-body .modal-game .modal-dialog {
-  max-width: 1200px;
+body .modal-game {
+
+  .modal-dialog {
+    max-width: 1200px;
+    min-height: initial;
+    height: 94%;
+  }
+
+  .modal-content {
+    height: 100%;
+  }
+
 }
 
 .modal-custom-header {
