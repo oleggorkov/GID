@@ -38,61 +38,39 @@ $(document).ready(function() {
         },
     });
 
-    // const tariffsBlock = document.querySelector('#tariffs');
-    // const modalEl      = document.querySelector('#modal-game');
+    const swiperCars = new Swiper('.swiper-cars', {
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 24,
+        pagination: {
+            el: '.swiper-pagination-cars',
+            clickable: true,
+        },
+    });
 
-    // if (!tariffsBlock || !modalEl || typeof bootstrap === 'undefined') return;
+    const swiperTeacher = new Swiper('.swiper-teacher', {
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 24,
+        pagination: {
+            el: '.swiper-pagination-teacher',
+            clickable: true,
+        },
+    });
 
-    // const modal = new bootstrap.Modal(modalEl, {
-    //     backdrop: true,
-    //     keyboard: true
-    // });
+    const section = document.querySelector('.learn');
+    const car     = document.querySelector('.learn-car');
+    const DIST    = 1350;
 
-    // let isOpen = false;
-
-    // // Следим за закрытием — чтобы можно было открыть снова
-    // modalEl.addEventListener('hidden.bs.modal', () => {
-    //     isOpen = false;
-    // });
-
-    // const observer = new IntersectionObserver((entries) => {
-    //     entries.forEach(entry => {
-    //     if (entry.isIntersecting && !isOpen) {
-    //         isOpen = true;
-    //         modal.show();
-    //     }
-    //     });
-    // }, {
-    //     threshold: 0.5
-    // });
-
-    // observer.observe(tariffsBlock);
-
-    // const tariffsBlock = document.querySelector('#tariffs');
-    // const modalEl      = document.querySelector('#modal-game');
-
-    // if (!tariffsBlock || !modalEl || typeof bootstrap === 'undefined') return;
-
-    // const modal = new bootstrap.Modal(modalEl, {
-    //     backdrop: true,
-    //     keyboard: true
-    // });
-
-    // const STORAGE_KEY = 'gameModalShown';
-    // if (sessionStorage.getItem(STORAGE_KEY)) return;
-
-    // const observer = new IntersectionObserver((entries) => {
-    //     entries.forEach(entry => {
-    //     if (entry.isIntersecting) {
-    //         modal.show();
-    //         sessionStorage.setItem(STORAGE_KEY, '1');
-    //         observer.disconnect();
-    //     }
-    //     });
-    // }, {
-    //     threshold: 0.5
-    // });
-
-    // observer.observe(tariffsBlock);
+    function onScroll() {
+    const r = section.getBoundingClientRect();
+    const total = r.height - window.innerHeight;
+    const p = Math.min(1, Math.max(0, -r.top / total)); // 0…1
+    car.style.transform = `translateY(${p * DIST}px)`;
+    }
+    
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
 });
 

@@ -2380,7 +2380,21 @@ footer {
 @media (max-width: 767px) {
   .autopark-grid {
     grid-template-columns: 1fr;
+    display: none;
   }
+}
+
+.cars-mob, .teacher-mob {
+  display: none;
+}
+@media (max-width: 767px) {
+  .cars-mob, .teacher-mob {
+    display: block;
+  }
+}
+
+body .swiper.swiper-cars, body .swiper.swiper-teacher {
+  padding: 0;
 }
 
 .autopark-item {
@@ -2588,18 +2602,19 @@ footer {
   -ms-flex-pack: center;
   justify-content: center;
   width: 72px;
-  height: auto;
-}
-@media (max-width: 991px) {
-  .learn-img img {
-    height: 100%;
-  }
+  height: 100%;
+  position: sticky;
+  top: 0;
 }
 @media (max-width: 767px) {
-  .learn-img img {
-    height: 100%;
-    width: auto;
+  .learn-img {
+    display: none;
   }
+}
+
+.learn-car {
+  position: absolute;
+  top: 20px;
 }
 
 .learn-block-item__left {
@@ -2664,6 +2679,12 @@ footer {
   width: 100%;
   height: 100%;
   border-radius: 12px;
+}
+@media (max-width: 767px) {
+  .learn-block-item__img img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
 }
 @media (max-width: 767px) {
   .learn-block-item__img {
@@ -2812,6 +2833,7 @@ footer {
 @media (max-width: 767px) {
   .teacher__wrap {
     grid-template-columns: 1fr;
+    display: none;
   }
 }
 

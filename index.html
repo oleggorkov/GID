@@ -99,7 +99,7 @@
     <main class="main">
       <div class="banner__wrap mb-100">
         <div class="overlay"></div>
-        <video class="banner-video" autoplay muted loop playsinline>
+        <video class="banner-video" autoplay muted loop playsinline="true" preload="auto">
           <source src="video/main-video.mp4" type="video/mp4">
         </video>
         <div class="ncontainer">
@@ -693,7 +693,7 @@
                 <div class="learn-block-item__subtitle">Впечатления студента после экзамена</div>
               </div>
             </div>
-            <div class="learn-img"> <img class="learn-img_d" src="images/learn-road.svg" alt="way"><img class="learn-img_m" src="images/way-mob.svg" alt="way"></div>
+            <div class="learn-img"> <img class="learn-img_d" src="images/learn-road.svg" alt="way"><img class="learn-img_m" src="images/way-mob.svg" alt="way"><img class="learn-car" src="images/car.svg" alt="way"></div>
             <div class="learn-block learn-block__right">
               <div class="learn-block-item">
                 <div class="learn-block-item__img"> <img src="images/learn1.png" alt="image"></div>
@@ -826,6 +826,75 @@
             </div>
           </div>
         </div>
+        <div class="teacher-mob">
+          <div class="mb-100">
+            <div class="swiper swiper-teacher">
+              <div class="swiper-wrapper"> 
+                <div class="swiper-slide">
+                  <div class="teacher-item"> 
+                    <div class="teacher-item__img"> <img src="images/ins1.png" alt="people"></div>
+                    <div class="teacher-item__col">
+                      <div class="teacher-item__name">Алексей Петров</div>
+                      <div class="teacher-item__year">Стаж вождения: 8 лет</div>
+                      <div class="teacher-item__text">Возможно какое-то описание</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="teacher-item"> 
+                    <div class="teacher-item__img"> <img src="images/ins2.png" alt="people"></div>
+                    <div class="teacher-item__col">
+                      <div class="teacher-item__name">Алексей Петров</div>
+                      <div class="teacher-item__year">Стаж вождения: 8 лет</div>
+                      <div class="teacher-item__text">Возможно какое-то описание</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="teacher-item"> 
+                    <div class="teacher-item__img"> <img src="images/ins5.png" alt="people"></div>
+                    <div class="teacher-item__col">
+                      <div class="teacher-item__name">Алексей Петров</div>
+                      <div class="teacher-item__year">Стаж вождения: 8 лет</div>
+                      <div class="teacher-item__text">Возможно какое-то описание</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="teacher-item"> 
+                    <div class="teacher-item__img"> <img src="images/ins3.png" alt="people"></div>
+                    <div class="teacher-item__col">
+                      <div class="teacher-item__name">Алексей Петров</div>
+                      <div class="teacher-item__year">Стаж вождения: 8 лет</div>
+                      <div class="teacher-item__text">Возможно какое-то описание</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="teacher-item"> 
+                    <div class="teacher-item__img"> <img src="images/ins4.png" alt="people"></div>
+                    <div class="teacher-item__col">
+                      <div class="teacher-item__name">Алексей Петров</div>
+                      <div class="teacher-item__year">Стаж вождения: 8 лет</div>
+                      <div class="teacher-item__text">Возможно какое-то описание</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="teacher-item"> 
+                    <div class="teacher-item__img"> <img src="images/ins5.png" alt="people"></div>
+                    <div class="teacher-item__col">
+                      <div class="teacher-item__name">Алексей Петров</div>
+                      <div class="teacher-item__year">Стаж вождения: 8 лет</div>
+                      <div class="teacher-item__text">Возможно какое-то описание</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination-teacher"></div>
+          </div>
+        </div>
       </div>
       <div class="ncontainer mb-100">
         <div class="autopark"> 
@@ -899,6 +968,93 @@
               <div class="autopark-item__label">2023 г.</div>
               <div class="autopark-item__label">1.5л.</div>
             </div>
+          </div>
+        </div>
+        <div class="cars-mob">
+          <div class="mb-100">
+            <div class="swiper swiper-cars">
+              <div class="swiper-wrapper"> 
+                <div class="swiper-slide">
+                  <div class="autopark-item"> 
+                    <div class="autopark-item__img"> <img src="images/park1.png" alt="car"></div>
+                    <div class="autopark-item__title">Марка и модель авто</div>
+                    <div class="autopark-item__desc">Легковые автомобили</div>
+                    <div class="autopark-item__row">
+                      <div class="autopark-item__label">АКПП</div>
+                      <div class="autopark-item__label">Бензин</div>
+                      <div class="autopark-item__label">2023 г.</div>
+                      <div class="autopark-item__label">1.5л.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="autopark-item"> 
+                    <div class="autopark-item__img"> <img src="images/park2.png" alt="car"></div>
+                    <div class="autopark-item__title">Марка и модель авто</div>
+                    <div class="autopark-item__desc">Легковые автомобили</div>
+                    <div class="autopark-item__row">
+                      <div class="autopark-item__label">АКПП</div>
+                      <div class="autopark-item__label">Бензин</div>
+                      <div class="autopark-item__label">2023 г.</div>
+                      <div class="autopark-item__label">1.5л.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="autopark-item"> 
+                    <div class="autopark-item__img"> <img src="images/park3.png" alt="car"></div>
+                    <div class="autopark-item__title">Марка и модель авто</div>
+                    <div class="autopark-item__desc">Легковые автомобили</div>
+                    <div class="autopark-item__row">
+                      <div class="autopark-item__label">АКПП</div>
+                      <div class="autopark-item__label">Бензин</div>
+                      <div class="autopark-item__label">2023 г.</div>
+                      <div class="autopark-item__label">1.5л.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="autopark-item"> 
+                    <div class="autopark-item__img"> <img src="images/park4.png" alt="car"></div>
+                    <div class="autopark-item__title">Марка и модель авто</div>
+                    <div class="autopark-item__desc">Легковые автомобили</div>
+                    <div class="autopark-item__row">
+                      <div class="autopark-item__label">АКПП</div>
+                      <div class="autopark-item__label">Бензин</div>
+                      <div class="autopark-item__label">2023 г.</div>
+                      <div class="autopark-item__label">1.5л.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="autopark-item"> 
+                    <div class="autopark-item__img"> <img src="images/park5.png" alt="car"></div>
+                    <div class="autopark-item__title">Марка и модель авто</div>
+                    <div class="autopark-item__desc">Легковые автомобили</div>
+                    <div class="autopark-item__row">
+                      <div class="autopark-item__label">АКПП</div>
+                      <div class="autopark-item__label">Бензин</div>
+                      <div class="autopark-item__label">2023 г.</div>
+                      <div class="autopark-item__label">1.5л.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="autopark-item"> 
+                    <div class="autopark-item__img"> <img src="images/park6.png" alt="car"></div>
+                    <div class="autopark-item__title">Марка и модель авто</div>
+                    <div class="autopark-item__desc">Легковые автомобили</div>
+                    <div class="autopark-item__row">
+                      <div class="autopark-item__label">АКПП</div>
+                      <div class="autopark-item__label">Бензин</div>
+                      <div class="autopark-item__label">2023 г.</div>
+                      <div class="autopark-item__label">1.5л.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination-cars"></div>
           </div>
         </div>
       </div>
