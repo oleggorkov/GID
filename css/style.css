@@ -880,6 +880,11 @@ footer {
   line-height: 20px;
   max-width: 257px;
 }
+@media (max-width: 767px) {
+  .footer-top__info {
+    max-width: initial;
+  }
+}
 
 .footer__logo {
   display: -webkit-box;
@@ -4221,6 +4226,11 @@ body .modal-game .modal-dialog {
 body .modal-game .modal-content {
   height: 100%;
 }
+@media (max-width: 767px) {
+  body .modal-game .modal-body {
+    overflow: auto;
+  }
+}
 
 .modal-custom-header {
   display: -webkit-box;
@@ -4903,6 +4913,13 @@ body .modal-game .modal-content {
 
 .teacher__wrap_about .teacher-item {
   background-color: #fff;
+}
+
+.teacher-mob .teacher-item {
+  background-color: #fff;
+}
+.teacher-mob .teacher-item__img {
+  background-color: #F6F6F6;
 }
 
 .req-tab {

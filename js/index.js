@@ -58,19 +58,42 @@ $(document).ready(function() {
         },
     });
 
-    const section = document.querySelector('.learn');
-    const car     = document.querySelector('.learn-car');
-    const DIST    = 1350;
+    (function initLearnCar() {
+        const section = document.querySelector('.learn');
+        const car     = document.querySelector('.learn-car');
+        
+        if (!section || !car) return;
 
-    function onScroll() {
-    const r = section.getBoundingClientRect();
-    const total = r.height - window.innerHeight;
-    const p = Math.min(1, Math.max(0, -r.top / total)); // 0…1
-    car.style.transform = `translateY(${p * DIST}px)`;
-    }
-    
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    onScroll();
+        const DIST = 1350;
+        let rafId = null;
+
+        function update() {
+            rafId = null;
+            const r = section.getBoundingClientRect();
+            const total = r.height - window.innerHeight;
+
+            if (total <= 0) {
+            car.style.transform = 'translateY(0px)';
+            return;
+            }
+
+            const p = Math.min(1, Math.max(0, -r.top / total));
+            car.style.transform = `translateY(${p * DIST}px)`;
+        }
+
+        function onScroll() {
+            if (rafId === null) rafId = requestAnimationFrame(update);
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        update();
+
+        return function destroy() {
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('resize', onScroll);
+            if (rafId !== null) cancelAnimationFrame(rafId);
+        };
+    })();
 });
 
