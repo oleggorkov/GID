@@ -6003,6 +6003,15 @@ body .modal-game .modal-content {
   }
 }
 
+.page-banner__tar {
+  background: url(../images/tariffs-page.png) no-repeat center;
+}
+@media (max-width: 767px) {
+  .page-banner__tar {
+    background: none;
+  }
+}
+
 .page-banner__ins {
   background: url(../images/ins-page.png) no-repeat center;
 }
